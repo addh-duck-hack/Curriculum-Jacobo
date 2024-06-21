@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  quintosolelquintosolmarketing.com:
+  acj.duchack.cloud:
     build:
       context: ./
       dockerfile: ./Dockerfile
@@ -14,7 +14,7 @@ services:
       - acj.duchack.cloud
 
 networks:
-  elquintosolmarketing.com:
+  acj.duchack.cloud:
     name: acj.duchack.cloud
     driver: bridge
   npm:
