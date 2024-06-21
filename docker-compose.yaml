@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  quintosolelquintosolmarketing.com:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: acj.duchack.cloud
+    restart: always
+    ports:
+      - 90:80
+    networks:
+      - npm
+      - acj.duchack.cloud
+
+networks:
+  elquintosolmarketing.com:
+    name: acj.duchack.cloud
+    driver: bridge
+  npm:
+    external: true
