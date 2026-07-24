@@ -1,21 +1,17 @@
-version: "3.7"
-
 services:
-  acj.duchack.cloud:
+  curriculum-jaco-app:
     build:
-      context: ./
+      context: .
       dockerfile: ./Dockerfile
-    container_name: acj.duchack.cloud
+    container_name: curriculum-jaco-app
     restart: always
-    ports:
-      - 90:80
     networks:
       - npm
-      - acj.duchack.cloud
+      - curriculum-jaco-net
 
 networks:
-  acj.duchack.cloud:
-    name: acj.duchack.cloud
+  curriculum-jaco-net:
+    name: curriculum-jaco-net
     driver: bridge
   npm:
     external: true
